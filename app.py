@@ -927,10 +927,10 @@ if not st.session_state.logged_in:
                 st.session_state.username = username
                 st.session_state.role = role
                 st.success(f"Welcome {username}, logged in as {role}")
-                st.experimental_rerun()
+                st.rerun()
         if st.button("Register"):
             st.session_state.page = "Register"
-            st.experimental_rerun()
+            st.rerun()
 
     elif st.session_state.page == "Register":
         st.subheader("Create an Account")
@@ -942,7 +942,7 @@ if not st.session_state.logged_in:
 
         if st.button("Login"):
             st.session_state.page = "Login"
-            st.experimental_rerun()
+            st.rerun()
 
 if st.session_state.logged_in:
     if st.session_state.role == "Resident":
