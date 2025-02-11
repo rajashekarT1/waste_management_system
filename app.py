@@ -959,4 +959,4 @@ if st.session_state.logged_in:
         st.session_state.username = None
         st.session_state.role = None
         st.session_state.page = "Login"
-        st.experimental_rerun()
+        st.rerun()
